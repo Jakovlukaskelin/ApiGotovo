@@ -1,0 +1,29 @@
+﻿ @Model List<SuperStore>
+
+@{
+    ViewBag.Title = "SuperStore Data";
+}
+
+<h2>SuperStore Data</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <!-- Add more columns as per your SuperStore class properties -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Category</td>
+                <!-- Add more columns as per your SuperStore class properties -->
+            </tr>
+        }
+    </tbody>
+</table>
